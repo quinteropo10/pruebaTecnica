@@ -1,9 +1,9 @@
-package com.youtube.jwt.service;
+package com.prueba.ecommerce.service;
 
-import com.youtube.jwt.dao.RoleDao;
-import com.youtube.jwt.dao.UserDao;
-import com.youtube.jwt.entity.Role;
-import com.youtube.jwt.entity.User;
+import com.prueba.ecommerce.entity.User;
+import com.prueba.ecommerce.dao.RoleDao;
+import com.prueba.ecommerce.dao.UserDao;
+import com.prueba.ecommerce.entity.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -36,8 +36,8 @@ public class UserService {
         roleDao.save(userRole);
 
         User adminUser = new User();
-        adminUser.setUserName("admin123");
-        adminUser.setUserPassword(getEncodedPassword("admin@pass"));
+        adminUser.setUserName("admin");
+        adminUser.setUserPassword(getEncodedPassword("12345"));
         adminUser.setUserFirstName("admin");
         adminUser.setUserLastName("admin");
         Set<Role> adminRoles = new HashSet<>();
@@ -45,15 +45,15 @@ public class UserService {
         adminUser.setRole(adminRoles);
         userDao.save(adminUser);
 
-//        User user = new User();
-//        user.setUserName("raj123");
-//        user.setUserPassword(getEncodedPassword("raj@123"));
-//        user.setUserFirstName("raj");
-//        user.setUserLastName("sharma");
-//        Set<Role> userRoles = new HashSet<>();
-//        userRoles.add(userRole);
-//        user.setRole(userRoles);
-//        userDao.save(user);
+        User user = new User();
+        user.setUserName("usuario");
+        user.setUserPassword(getEncodedPassword("12345"));
+        user.setUserFirstName("carlos");
+        user.setUserLastName("quintero");
+        Set<Role> userRoles = new HashSet<>();
+        userRoles.add(userRole);
+        user.setRole(userRoles);
+        userDao.save(user);
     }
 
     public User registerNewUser(User user) {

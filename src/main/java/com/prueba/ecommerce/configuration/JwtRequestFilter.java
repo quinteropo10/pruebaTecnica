@@ -1,7 +1,7 @@
-package com.youtube.jwt.configuration;
+package com.prueba.ecommerce.configuration;
 
-import com.youtube.jwt.service.JwtService;
-import com.youtube.jwt.util.JwtUtil;
+import com.prueba.ecommerce.service.JwtService;
+import com.prueba.ecommerce.util.JwtUtil;
 import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

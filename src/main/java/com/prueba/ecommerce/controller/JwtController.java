@@ -1,8 +1,8 @@
-package com.youtube.jwt.controller;
+package com.prueba.ecommerce.controller;
 
-import com.youtube.jwt.entity.JwtRequest;
-import com.youtube.jwt.entity.JwtResponse;
-import com.youtube.jwt.service.JwtService;
+import com.prueba.ecommerce.service.JwtService;
+import com.prueba.ecommerce.entity.JwtRequest;
+import com.prueba.ecommerce.entity.JwtResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
